@@ -1,0 +1,96 @@
+# Opptics Chrome Extension - React Migration Project
+
+## Purpose
+Opptics is a Chrome extension that enables dynamic text replacement across web pages. It allows users to:
+- Define custom text mappings for replacement
+- Choose from preset industry templates
+- Analyze websites for intelligent mapping suggestions
+- Compare demo sites against prospect sites
+- Track replacement statistics
+- Configure API settings for AI analysis
+
+## Core Features (from original)
+1. Text Replacement Engine (Reference: content.js lines 25-148)
+2. Template Management (Reference: popup.js lines 3-127)
+3. Site Analysis (Reference: popup.js lines 814-892)
+4. Settings Management
+5. UI Components and Styling
+
+## Build Requirements
+
+### Development Environment
+- Node.js (v16+)
+- npm or yarn
+- React 18+
+- TypeScript
+- Vite (for build tooling)
+
+### Required Dependencies
+
+
+### Key Components to Create
+1. TextReplacementEngine
+2. TemplateSelector
+3. SiteAnalyzer
+4. MappingEditor
+5. SettingsManager
+6. AnalysisResults
+
+### State Management
+Use Zustand for managing:
+- Active mappings
+- Template selection
+- Extension settings
+- Analysis results
+- Replacement statistics
+
+### Chrome Extension Requirements
+- Manifest V3 compliance
+- Content script isolation
+- Message passing between components
+- Chrome storage sync integration
+- Background service worker
+
+### Build Configuration
+Create a vite.config.ts that:
+- Handles multiple entry points
+- Bundles content scripts separately
+- Manages extension assets
+- Generates production-ready builds
+
+### Testing Requirements
+- Jest for unit testing
+- React Testing Library for component testing
+- Chrome extension testing utilities
+
+### Development Workflow
+1. Use `npm run dev` for development
+2. Load unpacked extension from `dist/`
+3. Hot reload support for popup
+4. Content script reloading mechanism
+
+### Migration Steps
+1. Port existing templates (Reference: popup.js lines 3-127)
+2. Migrate text replacement logic (Reference: content.js lines 25-148)
+3. Convert UI components to React
+4. Implement state management
+5. Add TypeScript types
+6. Set up build pipeline
+7. Add testing infrastructure
+
+### Security Considerations
+- Secure storage of API keys
+- Content script isolation
+- Cross-origin considerations
+- Permission handling
+
+### Performance Requirements
+- Efficient text replacement
+- Minimal DOM manipulation
+- Optimized React rendering
+- Bundle size optimization
+
+### Browser Support
+- Chrome 88+
+- Edge (Chromium-based)
+- Opera (Chromium-based)

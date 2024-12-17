@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Opptics",
+    "version": "1.0.0",
+    "description": "Dynamic text replacement across web pages",
+    "action": {
+      "default_popup": "index.html",
+      "default_title": "Opptics"
+    },
+    "permissions": [
+      "storage",
+      "activeTab"
+    ]
+  }
