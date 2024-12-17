@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import './App.css'
+import { TemplateSelector } from './components/TemplateSelector'
+import { MappingEditor } from './components/MappingEditor'
 
 function App() {
   const [activeTab, setActiveTab] = useState<'mappings' | 'templates' | 'analysis' | 'settings'>('mappings')
@@ -43,13 +45,14 @@ function App() {
           <div className="content-section">
             <h2>Text Mappings</h2>
             <p>Define your text replacement mappings here.</p>
+            <MappingEditor />
           </div>
         )}
         {activeTab === 'templates' && (
           <div className="content-section">
             <h2>Templates</h2>
             <p>Choose from preset industry templates.</p>
-            {/* Template components will go here */}
+            <TemplateSelector />
           </div>
         )}
         {activeTab === 'analysis' && (

@@ -12,7 +12,7 @@
 }
 
 .opptics-container {
-  width: 360px;
+  width: 400px;
   min-height: 600px;
   background-color: #ffffff;
   color: #1a1a1a;
@@ -66,8 +66,9 @@
 
 .opptics-main {
   flex: 1;
-  padding: 20px;
+  padding: 16px;
   background-color: #ffffff;
+  overflow-y: auto;
 }
 
 .content-section {
